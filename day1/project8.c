@@ -3,7 +3,7 @@
 
 int main(){
 
-    float montant, interest, mensuel;
+    float montant, interest , mensuel;
     float first, second, third;
 
 
@@ -14,11 +14,15 @@ int main(){
     printf("\nEntrez le paiement mensuel: ");
     scanf("%f",&mensuel);
 
-    first = montant + (montant * (interest / 12)) - mensuel;
+    interest = interest /100;
+    first = montant * (interest / 12) + montant - mensuel;
+    second = first * (interest / 12) + first - mensuel;
+    third = second * (interest / 12) + second - mensuel;
+
 
     printf("\nSolde restant après le premier paiement: %.2f", first);
-    printf("\nSolde restant après le deuxième paiement: ");
-    printf("\nSolde restant après le troisième paiement: \n");
+    printf("\nSolde restant après le deuxième paiement: %.2f", second);
+    printf("\nSolde restant après le troisième paiement: %.2f\n", third);
 
 
     return 0;
