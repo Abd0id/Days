@@ -1,8 +1,7 @@
 #include <stdio.h>
-int main(void)
-{
+int main(void){
     float x, y;
-    printf("Entre une valeur de x: ");
+    printf("Entrez une valeur de x: ");
     scanf("%f", &x);
 
     y = (3 * x * x * x * x * x) + (2 * x * x * x * x) - (5 * x * x * x) - (x * x) + (7 * x) - 6;
