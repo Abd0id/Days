@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main() {
     char ISBN[32];        
     char GS1[4];          
