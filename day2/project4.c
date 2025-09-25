@@ -1,43 +1,28 @@
 #include <stdio.h>
 
-int main(){
-
+int main()
+{
     char date1[9];
     char date2[9];
-    char mm1[3],jj1[3],aa1[3];
-    char mm2[3],jj2[3],aa2[3];
+    
+    printf("Entrez la premiere date (mm/jj/aa) :");
+    scanf("%8s", date1);
 
-    printf("Entrez la première date (mm/jj/aa) : ");
-    scanf("%s",date1);
+    printf("Entrez la deuxieme date (mm/jj/aa) :");
+    scanf("%8s", date2);
 
-    printf("Entrez la deuxième date (mm/jj/aa) : ");
-    scanf("%s",date2);
+    int month1 = (date1[0] - '0') * 10 + (date1[1] - '0');
+    int month2 = (date2[0] - '0') * 10 + (date2[1] - '0');
 
-
-//strcpy(date1, "3/6/08");
-//strcpy(date2, "5/17/07");
-
-    int i = 0, j = 0;
-    while (date1[i] != '/' && date1[i] != '\0') {
-        mm1[j++] = date1[i++];
+    if (month1 < month2)
+    {
+        printf("%s est plus tot que %s\n", date1, date2);
+        return 0;
     }
-    mm1[j] = '\0';
-    i++;
-
-     j = 0;
-    while (date1[i] != '/' && date1[i] != '\0') {
-        jj1[j++] = date1[i++];
+    else
+    {
+        printf("%s est plus tot que %s\n", date2, date1);
     }
-    jj1[j] = '\0';
-    i++; 
-
-     j = 0;
-    while (date1[i] != '/' && date1[i] != '\0') {
-        aa1[j++] = date1[i++];
-    }
-    aa1[j] = '\0';
-    i++; 
 
     return 0;
-
 }
