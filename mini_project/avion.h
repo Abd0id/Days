@@ -10,7 +10,7 @@ struct avion {
     bool status;
 };
 
-void addAvion (struct avion avions[], int avionCount)
+void addAvion (struct avion avions[], int avionCount);
 
 
 #endif

@@ -4,8 +4,7 @@
 #include "avion.h"
 
 
-struct avion addAvion (){
-    struct avion avions[MAX_AVIONS];
+void addAvion (struct avion avions[], int avionCount){
     int tmp_status;
     
     
@@ -22,17 +21,17 @@ struct avion addAvion (){
     scanf("%d",&tmp_status);    
 
     if (tmp_status == 0 || tmp_status == 1){
-        avions[MAX_AVIONS].status = (tmp_status != 0); 
+        avions[].status = (tmp_status != 0); 
     }else{
         printf("\nINVALID INPUT\n");
         printf("Entrez une valid statut d'avion (1 ou 0):");
         scanf("%d",&tmp_status);
     
         if (tmp_status == 0 || tmp_status == 1){
-            avions[MAX_AVIONS].status = (tmp_status != 0);
+            avions[avionCount].status = (tmp_status != 0);
         }else{
             printf("\nINVALID INPUT");
-            avions[MAX_AVIONS].status = false;
+            avions[avionCount].status = false;
         }
     }
 
@@ -47,5 +46,5 @@ struct avion addAvion (){
         avion[3][i] = status;
     }
 */
-    return avions[avionCount];
+ //   return avions[avionCount];
 }
