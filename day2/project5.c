@@ -11,9 +11,6 @@ int main()
 
     if (n >= 0 && n <= 100) {
         switch (n / 10) {
-            case 10:
-
-
             case 9:
 
                 printf("Note littérale : A\n");
