@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
-#include <stdlib.h>
 #include "avion.h"
+#include <stdlib.h>
 
 #define MAX_AVIONS 2 
 
@@ -35,45 +34,145 @@ int main(){
         
         switch (choix){
             case 0:
+                system("clear");
                 return 0;
             case 1:
+                system("clear");
                 if(avionCount < MAX_AVIONS){
-                    addAvion(avions, avionCount);
+                    printf("\n========= AJOUTE UN AVION =========\n");
+                    addAvion(avions, avionCount);//we will put that in some list to showAvion them
                     avionCount++;
                 }else{
                    printf("\nLA LIST EST PLAIN TU PEUX SUPPRIMER AVEC (3)");
                 }                    
                 system("clear");
                 break;
+
             case 2:
-            //  editAvion();
-                printf("\nNOT CODED YET!\n");
                 system("clear");
+                printf("\n========= EDITION D'UN AVION =========\n");
+                editAvion(avions, avionCount);
+                printf("(1) : Retourn\n");
+                printf("\t\n");
+                printf("(0) : Quitter\n");
+                printf("\t\n");
+
+                printf("Enterz vos choix :");
+                scanf("%d",&choix);
+
+                switch(choix){
+                    case 0:
+                        system("clear");
+                        return 0;
+                    case 1:
+                        system("clear");
+                        break;
+                    default:
+                        system("clear");
+                        break;
+                }
                 break;
+
             case 3:
-            //  deleteAvion();
-                printf("\nNOT CODED YET!\n");
                 system("clear");
+                printf("\n========= SUPPRESSION D'UN AVION =========\n");
+                avionCount = deleteAvion(avions, avionCount);
+                printf("(1) : Retourn\n");
+                printf("\t\n");
+                printf("(0) : Quitter\n");
+                printf("\t\n");
+
+                printf("Enterz vos choix :");
+                scanf("%d",&choix);
+
+                switch(choix){
+                    case 0:
+                        system("clear");
+                        return 0;
+                    case 1:
+                        system("clear");
+                        break;
+                    default:
+                        system("clear");
+                        break;
+                }
                 break;
+
             case 4:
-            //  showAvion();
-                printf("\nNOT CODED YET!\n");
                 system("clear");
+                printf("\n========= LIST DES AVIONS =========\n");
+                for(int i = 0; i < avionCount; i++) {
+                    showAvion(avions, i, avionCount);
+                }
+
+                printf("(1) : Retourn\n");
+                printf("\t\n");
+                printf("(0) : Quitter\n");
+                printf("\t\n");
+
+                printf("Enterz vos choix :");
+                scanf("%d",&choix);
+
+                switch(choix){
+                    case 0:
+                        system("clear");
+                        return 0;
+                    case 1:
+                        system("clear");
+                        break;
+                    default:
+                        system("clear");
+                        break;
+                }
                 break;
+
             case 5:
-            //  searchAvion();
-                printf("\nNOT CODED YET!\n");
                 system("clear");
+                printf("\n========= RECHERCHE D'UN AVION =========\n");
+                searchAvion(avions, avionCount);
+                printf("(1) : Retour\n");
+                printf("(0) : Quitter\n");
+                printf("Entrez votre choix : ");
+                scanf("%d", &choix);
+                switch(choix){
+                    case 0:
+                        system("clear");
+                        return 0;
+                    case 1:
+                        system("clear");
+                        break;
+                    default:
+                        system("clear");
+                        break;
+                }
                 break;
+
             case 6:
-            //  sortAvion();
                 system("clear");
-                printf("\nNOT CODED YET!\n");
+                printf("\n========= TRI DES AVIONS =========\n");
+                sortAvion(avions, avionCount);
+                printf("(1) : Retour\n");
+                printf("(0) : Quitter\n");
+                printf("Entrez votre choix : ");
+                scanf("%d", &choix);
+                switch(choix){
+                    case 0:
+                        system("clear");
+                        return 0;
+                    case 1:
+                        system("clear");
+                        break;
+                    default:
+                        system("clear");
+                        break;
+                }
                 break;
+
             default:
+                system("clear");
+                printf("Choix invalide!\n");
                 break;
         }
-        system("clear");
     }
     return 0;
 }
