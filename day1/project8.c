@@ -1,4 +1,3 @@
-//new_balance = old_balance + (old_balance * monthly_interest) - monthly_payment
 #include <stdio.h>
 
 int main(){

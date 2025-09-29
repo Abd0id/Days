@@ -5,13 +5,19 @@ int main(){
     int digit_seen[10] = {0};
     int digit;
     long n;
-
-    printf("Entrez un nombre : ");
-    scanf("%d",&n);
     
-    while (n > 0){
+    int isneg = 1;
+    while (isneg){
         printf("Entrez un nombre : ");
-        scanf("%d",&n);
+        scanf("l%d",&n);
+
+    
+        printf("Entrez un nombre : ");
+        scanf("%ld",&n);
+
+        if (n <= 0){
+            isneg = 0;
+        }
         
         while (n > 0) {
             digit = n % 10;
@@ -25,9 +31,9 @@ int main(){
             }
     
         printf("\nOccurrences : ");
-            for (int i = 0;i < 10;i++){
-                printf(" %d ",digit_seen[i]);
-            }
+        for (int i = 0;i < 10;i++){
+            printf(" %d ",digit_seen[i]);
+        }
     
         printf("\n");
 

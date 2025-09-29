@@ -3,7 +3,7 @@
 #include "avion.h"
 #include <stdlib.h>
 
-#define MAX_AVIONS 2 
+#define MAX_AVIONS 7
 
 int main(){
     struct avion avions[MAX_AVIONS];

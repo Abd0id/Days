@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main() {
     int n1, n2, og_n1, og_n2, old_n1;
     printf("Entrez une fraction : ");

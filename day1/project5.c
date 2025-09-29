@@ -1,5 +1,6 @@
 #include <stdio.h>
-int main(void){
+
+int main(){
     float x, y;
     printf("Entrez une valeur de x: ");
     scanf("%f", &x);

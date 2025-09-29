@@ -38,13 +38,13 @@ void addAvion (struct avion avions[], int avionCount){
 
 /*
     char avion[100][4];
-    char model[1][100];
+    char model[1][100][30];
     for (int i = 1, i < 100, i++){
-        avion[0][i] = name;
+        avion[0][i][i] = name;
         avion[1][i] = ID;
         avion[2][i] = capacity;
         avion[3][i] = status;
     }
 */
- //   return avions[avionCount];
+
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main(){
     float x, y;
     printf("Entrez une valeur de x: ");

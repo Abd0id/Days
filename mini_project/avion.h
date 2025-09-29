@@ -15,5 +15,6 @@ void editAvion(struct avion avions[], int avionCount);
 int deleteAvion(struct avion avions[], int avionCount);
 void searchAvion(struct avion avions[], int avionCount);
 void sortAvion(struct avion avions[], int avionCount);
+void bisearchAvion (struct avion avions[], int avionCount);
 
 #endif
